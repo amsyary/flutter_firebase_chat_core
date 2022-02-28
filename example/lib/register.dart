@@ -59,7 +59,7 @@ class _RegisterPageState extends State<RegisterPage> {
       );
       await FirebaseChatCore.instance.createUserInFirestore(
         types.User(
-          firstName: _firstName,
+          displayName: _firstName,
           id: credential.user!.uid,
           imageUrl: 'https://i.pravatar.cc/300?u=$_email',
           lastName: _lastName,

@@ -165,7 +165,7 @@ class FirebaseChatCore {
         .doc(user.id)
         .set({
       'createdAt': FieldValue.serverTimestamp(),
-      'firstName': user.firstName,
+      'firstName': user.displayName,
       'imageUrl': user.imageUrl,
       'lastName': user.lastName,
       'lastSeen': user.lastSeen,
@@ -427,7 +427,7 @@ class FirebaseChatCore {
 
               final data = doc.data();
 
-              data['createdAt'] = data['createdAt']?.millisecondsSinceEpoch;
+              data['createdAt'] = data['createdAt'];
               data['id'] = doc.id;
               data['lastSeen'] = data['lastSeen']?.millisecondsSinceEpoch;
               data['updatedAt'] = data['updatedAt']?.millisecondsSinceEpoch;

@@ -34,6 +34,8 @@ class _RoomsPageState extends State<RoomsPage> {
         setState(() {
           _user = user;
         });
+        FirebaseChatCore.instance
+            .setConfig(const FirebaseChatCoreConfig(null, 'Rooms', 'Users'));
       });
       setState(() {
         _initialized = true;
@@ -154,7 +156,6 @@ class _RoomsPageState extends State<RoomsPage> {
                     child: const Text('No rooms'),
                   );
                 }
-
                 return ListView.builder(
                   itemCount: snapshot.data!.length,
                   itemBuilder: (context, index) {
