@@ -140,9 +140,9 @@ class FirebaseChatCore {
         .collection(config.roomsCollectionName)
         .add({
       'createdAt': FieldValue.serverTimestamp(),
-      'imageUrl': null,
+      'imageUrl': otherUser.imageUrl,
       'metadata': metadata,
-      'name': null,
+      'name': otherUser.displayName,
       'type': types.RoomType.direct.toShortString(),
       'updatedAt': FieldValue.serverTimestamp(),
       'userIds': users.map((u) => u.id).toList(),

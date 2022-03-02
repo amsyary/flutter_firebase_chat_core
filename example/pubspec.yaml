@@ -37,9 +37,9 @@ dependencies:
   firebase_core: ^1.11.0
   firebase_storage: ^10.2.5
   flutter_chat_ui:
-    path: ../../flutter_chat_ui/
+    git: https://github.com/amsyary/flutter_chat_ui.git
   flutter_firebase_chat_core:
-    path: ../
+    git: https://github.com/amsyary/flutter_firebase_chat_core.git
   http: ^0.13.4
   image_picker: ^0.8.4+4
   mime: ^1.0.1
