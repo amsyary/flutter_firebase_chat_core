@@ -349,7 +349,10 @@ class FirebaseChatCore {
       messageMap['authorId'] = firebaseUser!.uid;
       messageMap['createdAt'] = FieldValue.serverTimestamp();
       messageMap['updatedAt'] = FieldValue.serverTimestamp();
-
+      messageMap['author'] = {
+        'authorId': firebaseUser!.uid,
+        'displayName': firebaseUser?.displayName
+      };
       await getFirebaseFirestore()
           .collection('${config.roomsCollectionName}/$roomId/messages')
           .add(messageMap);

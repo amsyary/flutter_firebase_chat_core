@@ -33,13 +33,13 @@ dependencies:
   cupertino_icons: ^1.0.4
   faker: ^2.0.0
   file_picker: ^4.3.2
-  firebase_auth: ^3.3.5
-  firebase_core: ^1.11.0
-  firebase_storage: ^10.2.5
+  firebase_auth: ^4.1.0
+  firebase_core: ^2.2.0
+  firebase_storage: ^11.0.10
   flutter_chat_ui:
     git: https://github.com/amsyary/flutter_chat_ui.git
   flutter_firebase_chat_core:
-    git: https://github.com/amsyary/flutter_firebase_chat_core.git
+    path: ../../flutter_firebase_chat_core
   http: ^0.13.4
   image_picker: ^0.8.4+4
   mime: ^1.0.1
