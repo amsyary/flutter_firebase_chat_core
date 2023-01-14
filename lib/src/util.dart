@@ -30,7 +30,9 @@ Future<Map<String, dynamic>> fetchUser(
   var data = doc.data();
   if (data == null) {
     data = {'userId': userId};
-    data = {'displayName': 'user not found'};
+    data['id'] = userId;
+    data['displayName'] = 'user not found';
+    data['role'] = role;
     return data;
   }
   data['createdAt'] = data['createdAt'];
